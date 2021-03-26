@@ -25,5 +25,4 @@ class User(SqlAlchemyBase):
     jobs = orm.relation("Jobs", back_populates='user')
 
     def __repr__(self):
-        return ' '.join([self.surname, self.name, str(self.age), self.position,
-                         self.speciality, self.address, self.email])
+        return ' '.join(['<Colonist>', str(self.id), self.surname, self.name])
